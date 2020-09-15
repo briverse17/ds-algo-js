@@ -23,7 +23,7 @@ let binary_search = function (array, low, high, value) {
         }
     }
 
-    return - 1;
+    return -1;
 };
 
 let exponential_search = function (array, value) {
@@ -39,4 +39,4 @@ let exponential_search = function (array, value) {
     return binary_search(array, i / 2, Math.min(i, arr.length), value);
 };
 
-console.log(exponential_search(arr, 30));
+console.log(exponential_search(arr, -2));
