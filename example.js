@@ -13,7 +13,7 @@ const readline = require("readline-sync");
 const { sleep }  = require("./utils");
 // ================================================
 
-// Toy data decleration (if needed)
+// Toy data declaration (if needed)
 // ================================================
 // Your code here
 // ================================================
