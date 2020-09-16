@@ -1,57 +1,113 @@
 /**
- * Thuật toán tìm kiếm tuần tự (linear/ sequential search)
- */
+ * DATA STRUCTURES AND ALGORITHMS IMPLEMENTATION IN JAVASCRIPT
+ * Binary search algorithm
+*/
 
-// Khởi tạo một mảng demo
-let arr = [
+// Create an array
+let test_arr = [
     1, 5, 7, 10, 12, 14, 15,
     18, 20, 22, 25, 27, 30,
     64, 110, 220];
 
- // Hàm tìm kiếm tuần tự sử dụng 1 vòng lặp
- // Tư tưởng: lấy từng phần tử trong mảng đem so sánh với giá trị cần tìm
- // Độ phức tạp thuật toán: O(n)
- function linear_search(array, value) {
-    // vòng lặp bắt đầu từ 0 (đầu mảng) và kết thúc ở cuối mảng (length -1)
+let my_colors = [
+    'blue',
+    'red',
+    'green',
+    'yellow'
+];
+
+/**
+ * linear searching with for loop
+ * @param {Array} array 
+ * @param {any} value 
+ * @returns
+ */
+function linear_search(array, value) {
+    // We use a for loop, start at the begin of the array (index = 0), end at the end of the array (index == array.length - 1)
     for (let i = 0; i < array.length; ++i) {
-        // nếu gặp được phần tử trùng với value, hàm trả về vị trí (index) của value trong mảng
-        if (array[i] === value){
+        // Check the value of each element in the array, if it equals to value, return its index (i)
+        if (array[i] === value) {
             return i;
         }
     }
-    // Nếu sau vòng lặp trên, mà vẫn chưa tìm được vị trí của value thì ta sẽ trả về một giá trị bất hợp lệ -1
-    return -1;
+
+    /*
+        let i = 0;
+
+        while (i < array.length - 1) {
+            if (array[i] === value){
+                return i;
+            }
+        }
+
+        return -1;
+    */
+
+    return -1; // return -1 if the array not contain the value
 }
 
-// Hàm tìm kiếm tuần tự sử dụng giải thuật đệ quy
-function recursive_linear_search(array, array_size, value){
+/**
+ * 
+ * @param {*} array 
+ * @param {*} array_size 
+ * @param {*} value 
+ * @returns 
+ */
+function recursive_linear_search(array, array_size, value) {
     if (array_size < 0) {
-        return -1; // Phần dừng: array_size < 0
-    }else {
+        return -1;
+    } else {
         if (array[array_size] === value) {
-            return array_size; // Phần dừng: phần tử tại array_size có giá trị trùng với giá trị cần tìm
+            return array_size;
         } else {
-            return recursive_linear_search(array, array_size - 1, value); // Phần đệ quy
+            return recursive_linear_search(array, array_size - 1, value);
         }
     }
 }
 
 // Test
-console.log("Looking for 30: " + recursive_linear_search(arr, arr.length - 1, 30));
-console.log("Looking for 221: " + recursive_linear_search(arr, arr.length - 1, 221));
+console.log("Looking for 30: " + recursive_linear_search(test_arr, test_arr.length - 1, 30));
+console.log("Looking for 221: " + recursive_linear_search(test_arr, test_arr.length - 1, 221));
+console.log("Looking for red color in colors array: " + (linear_search(my_colors, 'red') == 1 ? 'yes' : 'no'));
 
-// Viết ngắn gọn hơn bằng toán tử ba ngôi
+/**
+ * 
+ * @param {*} array 
+ * @param {*} array_size 
+ * @param {*} value 
+ * @returns 
+ */
 function func(array, array_size, value) {
     return (array_size > 0) ? ((array[array_size] === value) ? array_size : func(array, array_size - 1, value)) : -1;
 }
+
 // Test
-console.log("Looking for 30: " + func(arr, arr.length, 30));
+console.log("Looking for 30: " + func(test_arr, test_arr.length, 30));
 
-// Thêm vào prototype một method linear_searching với một parameter: value - giá trị cần tìm, method này trả về true hoặc false
-// Bạn có thể thay thế hàm search trong method này bằng recursive_linear_search
-Array.prototype.linear_searching = function(value) { return (linear_search(this, value) == -1) ? false : true; };
+
+/**
+ * 
+ * @param {*} value 
+ */
+Array.prototype.linear_searching = function (value) { return (linear_search(this, value) == -1) ? false : true; };
+
 // Test
-console.log("Looking for -1: " + arr.linear_searching(-1));
+console.log("Looking for -1: " + test_arr.linear_searching(-1));
 
 
+// ================================================
+// Driver code (if needed)
+// ================================================
+const run = async () => {
 
+};
+
+
+run();
+
+// ================================================
+/**
+ * Authors: Nhut-Nam Le & Minh-Vu Nguyen
+ * VNU-HCM, University of Science
+ * © 2020
+ */
