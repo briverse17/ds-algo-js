@@ -3,21 +3,10 @@
  * Binary search algorithm
 */
 
-// Create an array
-let test_arr = [
-    1, 5, 7, 10, 12, 14, 15,
-    18, 20, 22, 25, 27, 30,
-    64, 110, 220];
-
-let my_colors = [
-    'blue',
-    'red',
-    'green',
-    'yellow'
-];
-
+// Functions definition
+// ================================================
 /**
- * linear searching with for loop
+ * linear searching with for loop (iterative)
  * @param {Array} array 
  * @param {any} value 
  * @returns
@@ -47,10 +36,10 @@ function linear_search(array, value) {
 }
 
 /**
- * 
- * @param {*} array 
- * @param {*} array_size 
- * @param {*} value 
+ * linear searching with no for loop (recursive)
+ * @param {any} array 
+ * @param {number} array_size 
+ * @param {any} value 
  * @returns 
  */
 function recursive_linear_search(array, array_size, value) {
@@ -65,13 +54,8 @@ function recursive_linear_search(array, array_size, value) {
     }
 }
 
-// Test
-// console.log("Looking for 30: " + recursive_linear_search(test_arr, test_arr.length - 1, 30));
-// console.log("Looking for 221: " + recursive_linear_search(test_arr, test_arr.length - 1, 221));
-// console.log("Looking for red color in colors array: " + (linear_search(my_colors, 'red') == 1 ? 'yes' : 'no'));
-
 /**
- * 
+ * In short implement for recursive approach using ternary operator
  * @param {*} array 
  * @param {*} array_size 
  * @param {*} value 
@@ -81,13 +65,10 @@ function func(array, array_size, value) {
     return (array_size > 0) ? ((array[array_size] === value) ? array_size : func(array, array_size - 1, value)) : -1;
 }
 
-// Test
-// console.log("Looking for 30: " + func(test_arr, test_arr.length, 30));
-
 
 /**
- * 
- * @param {*} value 
+ * Add method linear_searching to array prototype
+ * @param {any} value 
  */
 Array.prototype.linear_searching = function (value) { return (linear_search(this, value) == -1) ? false : true; };
 
@@ -99,8 +80,9 @@ Array.prototype.linear_searching = function (value) { return (linear_search(this
 // ================================================
 module.exports = {
     LinearSearch: linear_search,
-    RecursiveLinearSearch: recursive_linear_search
-}
+    RecursiveLinearSearch: recursive_linear_search,
+    Simple: func
+};
 
 // ================================================
 // Driver code (if needed)
