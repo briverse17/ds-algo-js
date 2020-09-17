@@ -66,9 +66,9 @@ function recursive_linear_search(array, array_size, value) {
 }
 
 // Test
-console.log("Looking for 30: " + recursive_linear_search(test_arr, test_arr.length - 1, 30));
-console.log("Looking for 221: " + recursive_linear_search(test_arr, test_arr.length - 1, 221));
-console.log("Looking for red color in colors array: " + (linear_search(my_colors, 'red') == 1 ? 'yes' : 'no'));
+// console.log("Looking for 30: " + recursive_linear_search(test_arr, test_arr.length - 1, 30));
+// console.log("Looking for 221: " + recursive_linear_search(test_arr, test_arr.length - 1, 221));
+// console.log("Looking for red color in colors array: " + (linear_search(my_colors, 'red') == 1 ? 'yes' : 'no'));
 
 /**
  * 
@@ -82,7 +82,7 @@ function func(array, array_size, value) {
 }
 
 // Test
-console.log("Looking for 30: " + func(test_arr, test_arr.length, 30));
+// console.log("Looking for 30: " + func(test_arr, test_arr.length, 30));
 
 
 /**
@@ -92,18 +92,27 @@ console.log("Looking for 30: " + func(test_arr, test_arr.length, 30));
 Array.prototype.linear_searching = function (value) { return (linear_search(this, value) == -1) ? false : true; };
 
 // Test
-console.log("Looking for -1: " + test_arr.linear_searching(-1));
+// console.log("Looking for -1: " + test_arr.linear_searching(-1));
 
+// ================================================
+// Modules export
+// ================================================
+module.exports = {
+    LinearSearch: linear_search,
+    RecursiveLinearSearch: recursive_linear_search
+}
 
 // ================================================
 // Driver code (if needed)
 // ================================================
 const run = async () => {
 
+    // Coding something here :v
+
 };
 
 
-run();
+// run();
 
 // ================================================
 /**
