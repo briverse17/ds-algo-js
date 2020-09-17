@@ -1,0 +1,23 @@
+{
+  "name": "ds-algo-js",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000d\u0000s\u0000-\u0000a\u0000l\u0000g\u0000o\u0000-\u0000j\u0000s\u0000\r\u0000 \u0000",
+  "main": "example.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/briverse17/ds-algo-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/briverse17/ds-algo-js/issues"
+  },
+  "homepage": "https://github.com/briverse17/ds-algo-js#readme",
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
