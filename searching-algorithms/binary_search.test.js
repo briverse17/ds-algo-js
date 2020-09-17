@@ -1,9 +1,12 @@
+// Import modules from binary_search.js
 const search = require('./binary_search');
 
+// Declare reference function
 let binary_search = search.BinarySearch;
 
 let recurive_binary_search = search.RecursiveBinarySearch;
 
+// Test 00
 test('Testing for binary search using iterative approach', () => {
     let test_arr = [
         1, 5, 7, 10, 12, 14, 15,
@@ -13,6 +16,7 @@ test('Testing for binary search using iterative approach', () => {
     expect(binary_search(test_arr, 0, test_arr.length - 1, 30)).toBe(12);
 });
 
+// Test 01
 test('Testing for binary search using recursive approach', () => {
     let test_arr = [
         1, 5, 7, 10, 12, 14, 15,
