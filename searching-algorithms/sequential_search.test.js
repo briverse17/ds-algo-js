@@ -12,7 +12,6 @@ test('Testing for linear search using iterative approach', () => {
         1, 5, 7, 10, 12, 14, 15,
         18, 20, 22, 25, 27, 30,
         64, 110, 220];
-
     expect(linear_searching(test_arr, 30)).toBe(12);
 });
 
@@ -66,3 +65,7 @@ test('Testing for linear search using iterative approach', () => {
 });
 
 
+// ================================================
+// Authors: Nhut-Nam Le & Minh-Vu Nguyen
+// VNU-HCM, University of Science
+// © 2020
