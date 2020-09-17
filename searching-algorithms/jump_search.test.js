@@ -1,4 +1,4 @@
-// Import modules from sequential_search.js
+// Import modules from jump_search.js
 const search = require('./jump_search');
 
 // Declare reference function

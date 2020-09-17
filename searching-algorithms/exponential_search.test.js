@@ -1,4 +1,4 @@
-// Import modules from sequential_search.js
+// Import modules from exponential_search.js
 const search = require('./exponential_search');
 
 // Declare reference function
