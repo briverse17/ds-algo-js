@@ -78,12 +78,12 @@ Array.prototype.bubble_sort = function () {
 
 module.exports = {
     BubbleSort: bubble_sort,
+    BubbleSort2: bubble_sort_ver2,
     AlternativeBubbleSort: bubble_sort_ver3
 };
 
 
-let arr = [23, 17, 97, 44, 35, 10, 12, 8, 5, 78];
-
-console.log('Array before sorting: ' + arr);
-bubble_sort_ver3(arr);
-console.log('Array after sorting: ' + arr);
+// ================================================
+// Authors: Nhut-Nam Le & Minh-Vu Nguyen
+// VNU-HCM, University of Science
+// © 2020
