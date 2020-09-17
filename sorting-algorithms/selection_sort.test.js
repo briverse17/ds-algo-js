@@ -1,10 +1,35 @@
-// Import module from selection_sort.js
+// Packages declaration (if needed)
+// ================================================
 const sort = require('./selection_sort');
+// ================================================
 
+
+// Toy data declaration (if needed)
+// ================================================
 let selection_sort = sort.SelectionSort;
+// ================================================
 
+
+// Start testing
+// ================================================
 test('Test case 00 for selection sort', () => {
     let arr = [23, 17, 97, 44, 35, 10, 12, 8, 5, 78];
     selection_sort(arr);
-    expect(selection_sort(arr)).toEqual([ 5,  8, 10, 12, 17, 23, 35, 44, 78, 97]);
+    expect(arr).toEqual([ 5,  8, 10, 12, 17, 23, 35, 44, 78, 97]);
 });
+
+
+test('Test case 01 for selection sort', () => {
+    let arr = [23, 17, 97, 44, 35, 10, 12, 8, 5, 78];
+    arr.selection_sort();
+    expect(arr).toEqual([ 5,  8, 10, 12, 17, 23, 35, 44, 78, 97]);
+});
+
+// End testing
+// ================================================
+
+
+// ================================================
+// Authors: Nhut-Nam Le & Minh-Vu Nguyen
+// VNU-HCM, University of Science
+// © 2020

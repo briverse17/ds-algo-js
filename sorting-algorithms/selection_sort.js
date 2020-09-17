@@ -51,11 +51,7 @@ module.exports = {
 };
 
 
-let arr = [23, 17, 97, 44, 35, 10, 12, 8, 5, 78];
-
-console.log('Array before sorting: ' + arr);
-selection_sort(arr);
-console.log('Array after sorting: ' + arr);
-
-arr.selection_sort();
-console.log(arr);
+// ================================================
+// Authors: Nhut-Nam Le & Minh-Vu Nguyen
+// VNU-HCM, University of Science
+// © 2020
