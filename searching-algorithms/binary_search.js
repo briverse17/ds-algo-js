@@ -117,12 +117,16 @@ Array.prototype._binary_searching = (key) => { return binary_search(this, 0, thi
 
 // Test
 // console.log(test_arr.binary_searching(30));
+
 // ================================================
 // Modules export
 // ================================================
 module.exports = {
-    BinarySearch: binary_search
+    BinarySearch: binary_search,
+    RecursiveBinarySearch: recursive_binary_search
 };
+
+
 // ================================================
 // Driver code (if needed)
 // ================================================
