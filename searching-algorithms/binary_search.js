@@ -77,7 +77,7 @@ let binary_search = function (array, low, high, value) {
  * @param {any} value is the value need to find in the array
  * @returns the index of the value in array or -1 when can not found it in the array
  */
-Array.prototype.binary_searching = (value) => {
+Array.prototype.binary_searching = function (value) {
     let low = 0;
     let high = this.length - 1;
 
@@ -100,12 +100,13 @@ Array.prototype.binary_searching = (value) => {
     return false;
 };
 
+
 /**
  * Add to Array prototype method
  * @param {number} key 
  * @returns true if the key has found in array. Otherwise, return false
  */
-Array.prototype._binary_searching = (key) => { return binary_search(this, 0, this.length, key) != -1 ? true : false; };
+Array.prototype._binary_searching = function (key) { return binary_search(this, 0, this.length, key) != -1 ? true : false; };
 
 // ================================================
 // Modules export
