@@ -77,8 +77,8 @@ let binary_search = function (array, low, high, value) {
 };
 
 // Test
-console.log(binary_search(test_arr, 0, test_arr.length - 1, 30));
-console.log(recursive_binary_search(test_arr, 0, test_arr.length - 1, 30));
+// console.log(binary_search(test_arr, 0, test_arr.length - 1, 30));
+// console.log(recursive_binary_search(test_arr, 0, test_arr.length - 1, 30));
 
 /**
  * Add to Array prototype method
@@ -116,10 +116,14 @@ Array.prototype.binary_searching = (value) => {
 Array.prototype._binary_searching = (key) => { return binary_search(this, 0, this.length, key) != -1 ? true : false; };
 
 // Test
-console.log(test_arr.binary_searching(30));
-
+// console.log(test_arr.binary_searching(30));
 // ================================================
-
+// Modules export
+// ================================================
+module.exports = {
+    BinarySearch: binary_search
+};
+// ================================================
 // Driver code (if needed)
 // ================================================
 const run = async () => {
