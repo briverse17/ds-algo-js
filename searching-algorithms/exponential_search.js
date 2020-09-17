@@ -1,8 +1,15 @@
-let arr = [
-    1, 5, 7, 10, 12, 14, 15,
-    18, 20, 22, 25, 27, 30,
-    64, 110, 220];
+/**
+ * DATA STRUCTURES AND ALGORITHMS IMPLEMENTATION IN JAVASCRIPT
+ * Exponential search algorithm
+*/
 
+/**
+ * Binary Search
+ * @param {any} array 
+ * @param {number} low 
+ * @param {number} high 
+ * @param {any} value 
+ */    
 let binary_search = function (array, low, high, value) {
 
     if (low > high) { return -1; }
@@ -26,17 +33,45 @@ let binary_search = function (array, low, high, value) {
     return -1;
 };
 
-let exponential_search = function (array, value) {
+/**
+ * 
+ * @param {any} array is the input array
+ * @param {any} value is thing need to find in the array
+ * @returns the value's index in array. Otherwise, -1 is returned if the array does not contain the lookup value
+ */
+let exponential_search = (array, value) => {
+    // Step 01: Check the first element in the array
     if (array[0] === value) {
         return 0;
     }
 
     let i = 1;
+
     while (i < array.length && array[i] <= value) {
         i *= 2;
     }
 
+    // Use binary search
     return binary_search(array, i / 2, Math.min(i, arr.length), value);
 };
 
-console.log(exponential_search(arr, -2));
+// ================================================
+// Modules export
+// ================================================
+module.exports = {
+    BinarySearch: binary_search,
+    ExponentialSearch: exponential_search
+};
+
+// Driver code (if needed)
+// ================================================
+const run = async () => {
+
+};
+
+// ================================================
+/**
+ * Authors: Nhut-Nam Le & Minh-Vu Nguyen
+ * VNU-HCM, University of Science
+ * © 2020
+ */
