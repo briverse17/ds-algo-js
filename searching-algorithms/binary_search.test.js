@@ -123,6 +123,17 @@ test('Testing for binary search using recursive approach', () => {
 
     expect(test_arr.binary_searching(30)).toBe(true);
 });
+
+
+test('Testing for binary search using iterative approach', () => {
+    let test_arr = [
+        1, 5, 7, 10, 12, 14, 15,
+        18, 20, 22, 25, 27, 30,
+        64, 110, 220];
+
+    expect(test_arr._binary_searching(30)).toBe(true);
+});
+
 // ================================================
 // Authors: Nhut-Nam Le & Minh-Vu Nguyen
 // VNU-HCM, University of Science
