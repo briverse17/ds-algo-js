@@ -52,7 +52,7 @@ let exponential_search = (array, value) => {
     }
 
     // Use binary search
-    return binary_search(array, i / 2, Math.min(i, arr.length), value);
+    return binary_search(array, i / 2, Math.min(i, array.length), value);
 };
 
 // ================================================

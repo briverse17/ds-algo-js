@@ -56,9 +56,9 @@ function recursive_linear_search(array, array_size, value) {
 
 /**
  * In short implement for recursive approach using ternary operator
- * @param {*} array 
- * @param {*} array_size 
- * @param {*} value 
+ * @param {any} array 
+ * @param {number} array_size 
+ * @param {value} value 
  * @returns 
  */
 function func(array, array_size, value) {
@@ -71,9 +71,6 @@ function func(array, array_size, value) {
  * @param {any} value 
  */
 Array.prototype.linear_searching = function (value) { return (linear_search(this, value) == -1) ? false : true; };
-
-// Test
-// console.log("Looking for -1: " + test_arr.linear_searching(-1));
 
 // ================================================
 // Modules export
