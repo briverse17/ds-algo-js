@@ -9,12 +9,8 @@
  * Otherwise narrow it to the upper half. 
  * Repeatedly check until the value is found or the interval is empty. */
 
-// Create an array
-let test_arr = [
-    1, 5, 7, 10, 12, 14, 15,
-    18, 20, 22, 25, 27, 30,
-    64, 110, 220];
-
+// Functions definition
+// ================================================
 /**
  * Binary search (Recursive Approach)
  * @param {array} 
@@ -76,10 +72,6 @@ let binary_search = function (array, low, high, value) {
     return - 1;
 };
 
-// Test
-// console.log(binary_search(test_arr, 0, test_arr.length - 1, 30));
-// console.log(recursive_binary_search(test_arr, 0, test_arr.length - 1, 30));
-
 /**
  * Add to Array prototype method
  * @param {any} value is the value need to find in the array
@@ -114,9 +106,6 @@ Array.prototype.binary_searching = (value) => {
  * @returns true if the key has found in array. Otherwise, return false
  */
 Array.prototype._binary_searching = (key) => { return binary_search(this, 0, this.length, key) != -1 ? true : false; };
-
-// Test
-// console.log(test_arr.binary_searching(30));
 
 // ================================================
 // Modules export
